@@ -3,41 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BigCodec Research Demo</title>
+    <title>BigCodec: Pushing the Limits of Low-Bitrate Neural Speech Codec</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>BigCodec: Pushing the Limits of Low-Bitrate Neural Speech Codec</h1>
-        <div class="authors">
-            Detai Xin¹, Xu Tan², Shinnosuke Takamichi³, Hiroshi Saruwatari¹<br>
-            ¹The University of Tokyo, ²Microsoft, ³Keio University
-        </div>
-    </header>
-
-    <section class="abstract">
-        <h2>Abstract</h2>
-        <p>We present BigCodec... [论文摘要内容]</p>
-    </section>
-
-    <section class="audio-samples">
-        <h2>Audio Samples</h2>
-        <div class="sample-grid">
-            <!-- 重复以下结构为每个样本创建卡片 -->
-            <div class="sample-card">
-                <h3>GT vs BigCodec (1.04k)</h3>
-                <audio controls>
-                    <source src="assets/audio/gt.wav" type="audio/wav">
-                    Your browser does not support the audio element.
-                </audio>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">BigCodec:</h1>
+            <h2 class="subtitle">Pushing the Limits of Low-Bitrate Neural Speech Codec</h2>
+            
+            <div class="paper-links">
+                <a href="#" class="link-button">[Paper]</a>
+                <a href="#" class="link-button">[Code]</a>
             </div>
-            <!-- 其他样本卡片 -->
-        </div>
-    </section>
+            
+            <div class="authors">
+                <p>Detai Xin<sup>1</sup>, Xu Tan<sup>2</sup>, Shinnosuke Takamichi<sup>3</sup>, Hiroshi Saruwatari<sup>1</sup></p>
+                <p class="affiliations">
+                    <sup>1</sup>The University of Tokyo, <sup>2</sup>Microsoft, <sup>3</sup>Keio University
+                </p>
+            </div>
+        </header>
 
-    <script src="script.js"></script>
+        <section class="abstract-section">
+            <h3>Abstract:</h3>
+            <p class="abstract-text">
+                We present BigCodec, a low-bitrate neural speech codec. While recent neural speech codecs have shown impressive progress, their performance significantly deteriorates at low bitrates (around 1 kbps). Although a low bitrate inherently restricts performance, other factors, such as model capacity, also hinder further improvements. To address this problem, we scale up the model size to 159M parameters that is more than 10 times larger than popular codecs with about 10M parameters. Besides, we integrate sequential models into traditional convolutional architectures to better capture temporal dependency and adopt low-dimensional vector quantization to ensure a high code utilization. Comprehensive objective and subjective evaluations show that BigCodec, with a bitrate of 1.04 kbps, significantly outperforms several existing low-bitrate codecs. Furthermore, BigCodec achieves objective performance comparable to popular codecs operating at 4-6 times higher bitrates, and even delivers better subjective perceptual quality than the ground truth.
+            </p>
+        </section>
+
+        <div class="disclaimer">
+            <p><strong>This page is for research demonstration purposes only.</strong></p>
+        </div>
+
+        <section class="audio-samples">
+            <h3>Audio Samples</h3>
+            
+            <div class="sample-section">
+                <h4>Comparison with Ground Truth and Different Codecs</h4>
+                <div class="sample-grid">
+                    <div class="sample-card">
+                        <h5>Ground Truth</h5>
+                        <audio controls>
+                            <source src="audio/sample1_gt.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <div class="sample-card">
+                        <h5>BigCodec (1.04 kbps)</h5>
+                        <audio controls>
+                            <source src="audio/sample1_bigcodec.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <div class="sample-card">
+                        <h5>Encodec (1.5 kbps)</h5>
+                        <audio controls>
+                            <source src="audio/sample1_encodec.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                    
+                    <div class="sample-card">
+                        <h5>SpeechTokenizer (1.0 kbps)</h5>
+                        <audio controls>
+                            <source src="audio/sample1_speechtokenizer.wav" type="audio/wav">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sample-section">
+                <h4>Different Audio Conditions</h4>
+                
+                <div class="condition-group">
+                    <h5>Clean Speech</h5>
+                    <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth</h6>
+                            <audio controls>
+                                <source src="audio/clean_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>BigCodec (1.04 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="condition-group">
+                    <h5>Noisy Speech</h5>
+                    <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth</h6>
+                            <audio controls>
+                                <source src="audio/noisy_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>BigCodec (1.04 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/noisy_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="condition-group">
+                    <h5>Reverberant Speech</h5>
+                    <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth</h6>
+                            <audio controls>
+                                <source src="audio/reverb_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>BigCodec (1.04 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/reverb_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 Research Demonstration. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
-
-
-
