@@ -9,8 +9,8 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="main-title">BigCodec:</h1>
-            <h2 class="subtitle">Pushing the Limits of Low-Bitrate Neural Speech Codec</h2>
+            <h1 class="main-title">VoCodec:</h1>
+            <h2 class="subtitle">An Efficient Lightweight Low-Bitrate Neural Speech Codec</h2>
             
             <div class="paper-links">
                 <a href="#" class="link-button">[Paper]</a>
@@ -18,9 +18,10 @@
             </div>
             
             <div class="authors">
-                <p>Detai Xin<sup>1</sup>, Xu Tan<sup>2</sup>, Shinnosuke Takamichi<sup>3</sup>, Hiroshi Saruwatari<sup>1</sup></p>
+                <p>Leyan Yang<sup>1,2</sup>, Ronghui Hu<sup>1,2</sup>, Yang Xu<sup>1,2</sup>, Jing Lu<sup>1,2</sup></p>
                 <p class="affiliations">
-                    <sup>1</sup>The University of Tokyo, <sup>2</sup>Microsoft, <sup>3</sup>Keio University
+                    <sup>1</sup>Key Laboratory of Modern Acoustics, Nanjing University, Nanjing 210093, Jiangsu, China
+                    <sup>2</sup>NJU-Horizon Intelligent Audio Lab, Horizon Robotics, Beijing 100094, China
                 </p>
             </div>
         </header>
@@ -28,7 +29,7 @@
         <section class="abstract-section">
             <h3>Abstract:</h3>
             <p class="abstract-text">
-                We present BigCodec, a low-bitrate neural speech codec. While recent neural speech codecs have shown impressive progress, their performance significantly deteriorates at low bitrates (around 1 kbps). Although a low bitrate inherently restricts performance, other factors, such as model capacity, also hinder further improvements. To address this problem, we scale up the model size to 159M parameters that is more than 10 times larger than popular codecs with about 10M parameters. Besides, we integrate sequential models into traditional convolutional architectures to better capture temporal dependency and adopt low-dimensional vector quantization to ensure a high code utilization. Comprehensive objective and subjective evaluations show that BigCodec, with a bitrate of 1.04 kbps, significantly outperforms several existing low-bitrate codecs. Furthermore, BigCodec achieves objective performance comparable to popular codecs operating at 4-6 times higher bitrates, and even delivers better subjective perceptual quality than the ground truth.
+                Recent advancements in end-to-end neural speech codecs enable compressing audio at extremely low bitrates while maintaining high-fidelity reconstruction. However, low computational complexity and low latency remain crucial for real-time communication. In this paper, we propose VoCodec, a speech codec model featuring a computational complexity of only 349.29 M multiply-accumulate operations per second (MAC/s) and a latency of 30 ms. The proposed method ranked fourth on Track 1 in the 2025 LRAC Challenge and achieved the highest subjective evaluation score (MUSHRA) on the clean speech test set.
             </p>
         </section>
 
@@ -141,3 +142,4 @@
     </div>
 </body>
 </html>
+
