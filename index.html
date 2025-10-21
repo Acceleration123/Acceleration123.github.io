@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BigCodec: Pushing the Limits of Low-Bitrate Neural Speech Codec</title>
+    <title>VoCodec: An Efficient Lightweight Low-Bitrate Neural Speech Codec</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +21,7 @@
                 <p>Leyan Yang<sup>1,2</sup>, Ronghui Hu<sup>1,2</sup>, Yang Xu<sup>1,2</sup>, Jing Lu<sup>1,2</sup></p>
                 <p class="affiliations">
                     <sup>1</sup>Key Laboratory of Modern Acoustics, Nanjing University, Nanjing 210093, Jiangsu, China
+                    
                     <sup>2</sup>NJU-Horizon Intelligent Audio Lab, Horizon Robotics, Beijing 100094, China
                 </p>
             </div>
@@ -40,7 +41,7 @@
         <section class="audio-samples">
             <h3>Audio Samples</h3>
             
-            <div class="sample-section">
+            <!-- <div class="sample-section">
                 <h4>Comparison with Ground Truth and Different Codecs</h4>
                 <div class="sample-grid">
                     <div class="sample-card">
@@ -75,7 +76,7 @@
                         </audio>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="sample-section">
                 <h4>Different Audio Conditions</h4>
@@ -84,13 +85,61 @@
                     <h5>Clean Speech</h5>
                     <div class="sample-grid">
                         <div class="sample-card">
-                            <h6>Ground Truth</h6>
+                            <h6>Ground Truth 1</h6>
                             <audio controls>
                                 <source src="audio/clean_gt.wav" type="audio/wav">
                             </audio>
                         </div>
                         <div class="sample-card">
-                            <h6>BigCodec (1.04 kbps)</h6>
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+
+                     <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth 2</h6>
+                            <audio controls>
+                                <source src="audio/clean_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+
+                     <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth 3</h6>
+                            <audio controls>
+                                <source src="audio/clean_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
                             <audio controls>
                                 <source src="audio/clean_bigcodec.wav" type="audio/wav">
                             </audio>
@@ -102,15 +151,63 @@
                     <h5>Noisy Speech</h5>
                     <div class="sample-grid">
                         <div class="sample-card">
-                            <h6>Ground Truth</h6>
+                            <h6>Ground Truth 1</h6>
                             <audio controls>
                                 <source src="audio/noisy_gt.wav" type="audio/wav">
                             </audio>
                         </div>
                         <div class="sample-card">
-                            <h6>BigCodec (1.04 kbps)</h6>
+                            <h6>VoCodec (6 kbps)</h6>
                             <audio controls>
                                 <source src="audio/noisy_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+
+                      <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth 2</h6>
+                            <audio controls>
+                                <source src="audio/noisy_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/noisy_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                    </div>
+
+                      <div class="sample-grid">
+                        <div class="sample-card">
+                            <h6>Ground Truth 3</h6>
+                            <audio controls>
+                                <source src="audio/noisy_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/noisy_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
                             </audio>
                         </div>
                     </div>
@@ -126,9 +223,53 @@
                             </audio>
                         </div>
                         <div class="sample-card">
-                            <h6>BigCodec (1.04 kbps)</h6>
+                            <h6>VoCodec (6 kbps)</h6>
                             <audio controls>
                                 <source src="audio/reverb_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+
+                        <div class="sample-card">
+                            <h6>Ground Truth 2</h6>
+                            <audio controls>
+                                <source src="audio/reverb_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/reverb_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+
+                        <div class="sample-card">
+                            <h6>Ground Truth 3</h6>
+                            <audio controls>
+                                <source src="audio/reverb_gt.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (6 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/reverb_bigcodec.wav" type="audio/wav">
+                            </audio>
+                        </div>
+                        <div class="sample-card">
+                            <h6>VoCodec (1 kbps)</h6>
+                            <audio controls>
+                                <source src="audio/clean_bigcodec.wav" type="audio/wav">
                             </audio>
                         </div>
                     </div>
@@ -142,4 +283,5 @@
     </div>
 </body>
 </html>
+
 
